@@ -4,6 +4,19 @@ logging:
     root: INFO
 
 server:
-  port: 8081
-  servlet:
-    context-path: /api
+  port: 8011
+#  servlet:
+#    context-path: /api
+
+spring:
+  webflux:
+    base-path: /api
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+
+# noinspection undefined
+mecm:
+  auth:
+    token:
+      enable: false
